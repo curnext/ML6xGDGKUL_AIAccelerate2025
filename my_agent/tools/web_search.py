@@ -13,7 +13,7 @@ from my_agent.utils.logger import get_structured_logger
 logger = get_structured_logger(__name__)
 
 
-@retry_with_backoff(max_retries=3, base_delay=1.0)
+@retry_with_backoff(max_retries=2, base_delay=0.5)  # Reduced retries and delay for faster failure
 def _call_serper_api(
     query: str,
     num_results: int,
@@ -88,7 +88,8 @@ def _call_serper_api(
         headers={
             "X-API-KEY": api_key,
             "Content-Type": "application/json"
-        }
+        },
+        timeout=10.0
     )
 
     response.raise_for_status()

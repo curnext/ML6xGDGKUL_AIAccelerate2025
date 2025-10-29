@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(adk api_server:*)",
+      "Bash(timeout /t 5)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Bash(del .\\?nul)",
+      "Bash(cmd /c \"del .\\?\\C:\\Users\\votev\\OneDrive - KU Leuven\\Leuven\\Job\\ML6xGDGKUL_AIAccelerate2025\\nul\")",
+      "Bash(powershell -Command \"Remove-Item -Path ''\\?\\C:\\Users\\votev\\OneDrive - KU Leuven\\Leuven\\Job\\ML6xGDGKUL_AIAccelerate2025\\nul'' -Force\")",
+      "Bash(powershell -Command:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

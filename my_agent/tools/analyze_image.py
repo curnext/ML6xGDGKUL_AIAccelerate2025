@@ -1,8 +1,5 @@
 """
 Image Analysis Tool - Gemini Vision for visual understanding
-
-Uses Google's Gemini vision models to analyze images, charts, diagrams,
-screenshots, and other visual content. Supports both local files and URLs.
 """
 
 import os
@@ -72,7 +69,7 @@ def analyze_image(
         prompt = _build_vision_prompt(question, detail_level)
 
         # Call Gemini vision model
-        model = genai.GenerativeModel('gemini-1.5-flash')  # Flash for speed
+        model = genai.GenerativeModel('gemini-2.5-pro')  # Flash for speed
 
         # Prepare image for Gemini
         image_part = {

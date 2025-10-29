@@ -97,7 +97,7 @@ root_agent = llm_agent.Agent(
 
 Available models:
 - `gemini-flash-lite-latest` (default - fast and lightweight)
-- `gemini-flash-latest` (for accuracy)
+- `gemini-2.5-pro` (for accuracy)
 
 ### Adding Custom Tools
 

@@ -14,7 +14,7 @@ def get_http_client() -> httpx.Client:
 
     if _http_client is None:
         _http_client = httpx.Client(
-            timeout=httpx.Timeout(30.0, connect=10.0),
+            timeout=httpx.Timeout(20.0, connect=10.0),  # Reduced from 30s to 20s for faster failures
             limits=httpx.Limits(max_connections=20, max_keepalive_connections=10),
             follow_redirects=True,
             headers={
@@ -93,5 +93,5 @@ class RateLimiter:
 
 
 # Global rate limiters
-serper_rate_limiter = RateLimiter(requests_per_minute=1000)  # Serper limit
+serper_rate_limiter = RateLimiter(requests_per_minute=60)  # Serper limit
 fetch_rate_limiter = RateLimiter(requests_per_minute=60)  # Conservative fetch limit

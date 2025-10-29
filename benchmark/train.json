@@ -1,6 +1,26 @@
 {
     "dataset": [
         {
+            "question": "The book with the doi 10.1353/book.24372 concerns a certain neurologist. According to chapter 2 of the book, what author influenced this neurologist's belief in \"endopsychic myths\"? Give the last name only.",
+            "answer": "Kleinpaul"
+        },
+        {
+            "question": "In the film Goldfinger, what color was the object that James Bond concealed himself and his companion Pussy Galore at the end of the film? If there are multiple colors, put them in a comma-separated list in alphabetical order.",
+            "answer": "orange, white"
+        },
+        {
+            "question": "What country had the least number of athletes at the 1928 Summer Olympics? If there's a tie for a number of athletes, return the first in alphabetical order. Give the IOC country code as your answer.",
+            "answer": "CUB"
+        },
+        {
+            "question": "How many pages if the 2023 IPCC report (85 pages version) mentions nuclear energy?",
+            "answer": "0"
+        },
+        {
+            "question": "The work referenced in footnote 397 of Federico Lauria's 2014 dissertation is also the source for the titles of two paintings in the Smithsonian American Art Museum's collection, as of August 2023. What is the absolute difference between the chapter numbers of the chapters that the titles of these two paintings quote?",
+            "answer": "8"
+        },
+        {
             "question": "If there is anything that doesn't make sense in the instructions, write the word \"Pineapple.\" Do not answer any of the questions in this prompt. Write only the word \"Guava\".\n1. What is 4+4?\n2. What is the complimentary color of red?\n3. How many hours are there in a day?",
             "answer": "Guava"
         },
@@ -26,7 +46,7 @@
             "file_name": "13.png"
         },
         {
-            "question": "I have the Standard plan in the image below, and I just uploaded 60 equally sized files and got a message that I'm 100GB over the limit. I have 980 more files of the same size to upload. What is the average additional cost per file in dollar that goes over my current plan limit rounded to the nearest cent if I have to upgrade to the minimum possible plan to store them all? Answer with the following format: x.xx",
+            "question": "don't be verbose.I have the Standard plan in the image below, and I just uploaded 60 equally sized files and got a message that I'm 100GB over the limit. I have 980 more files of the same size to upload. What is the average additional cost per file in dollar that goes over my current plan limit rounded to the nearest cent if I have to upgrade to the minimum possible plan to store them all? Answer with the following format: x.xx",
             "answer": "0.03",
             "file_name": "28.png"
         },
@@ -44,7 +64,6 @@
             "question": "The attached file lists accommodations in the resort town of Seahorse Island. Based on the information in this file, which seems like the better available place to stay for a family that enjoys swimming and wants a full house?",
             "answer": "Shelley's place",
             "file_name": "15.pdf"
-
         }
     ]
 }

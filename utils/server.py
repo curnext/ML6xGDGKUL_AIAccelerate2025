@@ -36,7 +36,7 @@ class ADKAgentRunner:
         """Start the ADK API server in the background if not already running."""
         # First check if a server is already running
         if self._is_server_running():
-            print(f"✓ Using existing ADK API server at {self.base_url}")
+            print(f"[OK] Using existing ADK API server at {self.base_url}")
             return
 
         if self.server_process is not None:
@@ -63,7 +63,7 @@ class ADKAgentRunner:
             try:
                 response = requests.get(f"{self.base_url}/list-apps", timeout=1)
                 if response.status_code == 200:
-                    print(f"✓ ADK API server started successfully on {self.base_url}")
+                    print(f"[OK] ADK API server started successfully on {self.base_url}")
                     return
             except requests.exceptions.RequestException:
                 time.sleep(1)
@@ -117,11 +117,16 @@ class ADKAgentRunner:
         # Prepare message
         message_parts = [{"text": question}]
 
-        # Add file paths to the question
+        # Add file paths to the question with explicit instructions
         if file_paths:
-            # For now, just mention the files in the text
-            file_info = f"\n\nNote: The following files are relevant: {', '.join(file_paths)}"
-            message_parts[0]["text"] += file_info
+            # Provide clear attachment instructions with exact paths
+            # Format: Question first, then attachments list and usage hint
+            attachments_hint = (
+                "\n\nAttachments:\n"
+                + "\n".join(f"- {path}" for path in file_paths)
+                + "\nUse analyze_image for images (.png/.jpg) and fetch_pdf for PDFs (.pdf) with the exact paths above."
+            )
+            message_parts[0]["text"] += attachments_hint
 
         # Send message using /run endpoint
         try:
@@ -136,7 +141,7 @@ class ADKAgentRunner:
                         "parts": message_parts
                     }
                 },
-                timeout=120
+                timeout=90
             )
             response.raise_for_status()
             events = response.json()

@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\Users\\votev\\OneDrive - KU Leuven\\Git\\ML6xGDGKUL_AIAccelerate2025\" /s /b)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(uv add:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(uv run:*)",
+      "Bash(timeout 5 uv run:*)",
+      "Bash(exit 0)",
+      "Bash(set:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(timeout 120 uv run:*)",
+      "Bash(timeout 10 uv run:*)",
+      "Bash(copy my_agent.env .env)",
+      "Bash(uv pip:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

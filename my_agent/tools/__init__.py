@@ -1,2 +1,3 @@
 from .web_search import web_search
-from .read_files import read_png_as_string
+from .fetch_url import fetch_url
+from .compose_answer import compose_answer

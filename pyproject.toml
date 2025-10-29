@@ -8,4 +8,5 @@ dependencies = [
     "google-adk",
     "colorama>=0.4.6",
     "pyfiglet>=1.0.4",
+    "pypdf2>=3.0.1",
 ]

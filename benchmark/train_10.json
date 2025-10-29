@@ -1,0 +1,10 @@
+{
+    "dataset": [
+        {
+            "question": "The attached file lists accommodations in the resort town of Seahorse Island. Based on the information in this file, which seems like the better available place to stay for a family that enjoys swimming and wants a full house?",
+            "answer": "Shelley's place",
+            "file_name": "15.pdf"
+        }
+    ]
+}
+
